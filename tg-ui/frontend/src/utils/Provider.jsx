@@ -1,12 +1,14 @@
 'use client';
 
 import {PrivyProvider} from '@privy-io/react-auth';
+import {zircuitTestnet} from 'viem/chains';
 
 export default function Providers({children}) {
   return<PrivyProvider
   appId={process.env.NEXT_PUBLIC_PRIVY_APP_ID}
   config={{
-  
+    defaultChain: zircuitTestnet ,
+    supportedChains: [zircuitTestnet] ,
     appearance: {
       theme: "dark",
       accentColor: "#080d27",
