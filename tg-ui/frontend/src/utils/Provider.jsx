@@ -9,6 +9,7 @@ export default function Providers({children}) {
   config={{
     defaultChain: zircuitTestnet ,
     supportedChains: [zircuitTestnet] ,
+    loginMethods: ['email', 'wallet', 'twitter'] ,
     appearance: {
       theme: "dark",
       accentColor: "#080d27",
